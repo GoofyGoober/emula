@@ -1,0 +1,32 @@
+/ Make sure all your bars are the first things in your <body>
+%header.bar.bar-nav
+  %h1.title Emula
+  %a.icon.icon-left-nav.pull-left(href='index-home')
+/ Wrap all non-bar HTML in the .content div (this is actually what scrolls)
+.content
+  %p.content-padded Welcome to the Emula. The slowest sending mail app ever.
+  
+  .card
+    .content-padded
+      %form
+        .input-group
+          .input-row
+            %label From
+            %input{type: "email", placeholder:'stefano@pinpix.it', disabled:"true"}/
+          .input-row
+            %label To
+            %input{type: "email"}/
+        
+          .input-row
+            %label Message
+            %input#text-input{type: "text", maxlength: 10}/
+    
+  .content-padded
+    %button.btn.btn-positive.btn-block Send
+
+  .content-padded
+    #output
+    #output-binary
+
+%script{src: "js/jquery.js"}
+%script{src: "js/script.js"}
