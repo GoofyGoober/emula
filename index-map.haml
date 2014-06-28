@@ -1,0 +1,32 @@
+/ Make sure all your bars are the first things in your <body>
+%header.bar.bar-nav
+  
+  %a.icon.pull-left(href='index')
+    %img(src='logo.png' height="25")
+  
+  %h1.title 
+    Map
+/ Wrap all non-bar HTML in the .content div (this is actually what scrolls)
+
+.content
+  
+  %iframe#mappa{src: "https://mapsengine.google.com/map/embed?mid=zaexRgZEI_Mo.k4HPcNTKk8fA"}
+  :javascript
+    $('#mappa').width($(window).width())
+      $('#mappa').height($(window).height() - 70)
+
+    window.addEventListener('push', function(){
+      $('#mappa').width($(window).width())
+      $('#mappa').height($(window).height() - 70)
+
+    })
+    
+    
+
+
+
+%nav.bar.bar-standard.bar-footer
+  .segmented-control
+    %a.control-item(href='index-mail') Mail
+    %a.control-item.active(href='index-map') Map
+    %a.control-item(href='index-gallery') Gallery
