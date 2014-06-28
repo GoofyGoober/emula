@@ -9,7 +9,14 @@
 %link{href: "css/ratchet/ratchet.css", rel: "stylesheet"}/
 / Include the compiled Ratchet JS
 %script{src: "js/ratchet.js"}
+%script{src: "js/fingerblast.js"}
 %script{src: "js/jquery.js"}
+:javascript
+  $('document').ready(function(){
+  var fb = new FingerBlast ('body');
+  console.log("CIAO")
+  console.log(fb)
+  })
 :css
   .slide img{
     min-width: 100%;
