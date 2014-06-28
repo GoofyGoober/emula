@@ -1,0 +1,15 @@
+%header.bar.bar-nav
+  %h1.title 
+    Welcome
+.content
+  .content-padded(style="text-align:center")
+    %a(href='index-mail.html')
+      %img#splash(src="splash.png")
+  :javascript
+    var audioElement = document.createElement('audio');
+    audioElement.setAttribute('src', 'asino-verso.ogg');
+
+    $('#splash').click(function(){
+      audioElement.play()
+    })
+    $.get();

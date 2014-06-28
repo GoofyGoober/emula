@@ -1,0 +1,48 @@
+/ Make sure all your bars are the first things in your <body>
+%header.bar.bar-nav
+  
+  %a.icon.pull-left(href='index.html')
+    %img(src='logo.png' height="25")
+  
+  %h1.title 
+    Mail
+  %a.icon.icon-info.pull-right
+/ Wrap all non-bar HTML in the .content div (this is actually what scrolls)
+
+.content
+  
+  .card
+    .content-padded
+      %form
+        .input-group
+          .input-row
+            %label From
+            %input#text-input-sender{type: "email"}/
+          .input-row
+            %label To
+            %input#text-input-receiver{type: "email"}/
+        
+          .input-row
+            %label Message
+            %input#text-input-message{type: "text", maxlength: 10}/
+
+  .content-padded
+    #output
+    #output-binary
+    #output-quadrati
+    %br
+    %br
+    %br
+    %br
+    %br
+
+.bar.bar-standard.bar-footer-secondary
+  #send-btn.btn.btn-positive.btn-block Send
+
+%script{src: "js/script.js"}
+
+%nav.bar.bar-standard.bar-footer
+  .segmented-control
+    %a.control-item.active Mail
+    %a.control-item(href='index-map.html') Maps
+    %a.control-item(href='index-gallery.html') Gallery

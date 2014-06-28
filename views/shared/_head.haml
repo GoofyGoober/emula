@@ -1,0 +1,18 @@
+%meta{charset: "utf-8"}/
+%title Emula
+/ Sets initial viewport load and disables zooming
+%meta{content: "initial-scale=1, maximum-scale=1, user-scalable=no, minimal-ui", name: "viewport"}/
+/ Makes your prototype chrome-less once bookmarked to your phone's home screen
+%meta{content: "yes", name: "apple-mobile-web-app-capable"}/
+%meta{content: "black", name: "apple-mobile-web-app-status-bar-style"}/
+/ Include the compiled Ratchet CSS
+%link{href: "css/ratchet/ratchet.css", rel: "stylesheet"}/
+/ Include the compiled Ratchet JS
+%script{src: "js/ratchet.js"}
+%script{src: "js/jquery.js"}
+:css
+  .slide img{
+    min-width: 100%;
+    max-width: 100%;
+    }
+    
