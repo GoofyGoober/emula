@@ -10,19 +10,7 @@
 
 .content
   
-  %iframe#mappa{src: "https://mapsengine.google.com/map/embed?mid=zaexRgZEI_Mo.k4HPcNTKk8fA"}
-  :javascript
-    $('#mappa').width($(window).width())
-      $('#mappa').height($(window).height() - 70)
-
-    window.addEventListener('push', function(){
-      $('#mappa').width($(window).width())
-      $('#mappa').height($(window).height() - 70)
-
-    })
-    
-    
-
+  %iframe#mappa{src: "https://mapsengine.google.com/map/embed?mid=zaexRgZEI_Mo.k4HPcNTKk8fA", width:"100%", height:"100%"}
 
 
 %nav.bar.bar-standard.bar-footer
